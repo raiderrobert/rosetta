@@ -23,19 +23,19 @@ urlpatterns = [
 
 ####Flask
 ```python    
-@app.route('articles/2003/') 
+@app.route('articles/2003/')
 def special_case_2003():
 	pass
 
-@app.route('articles/<int:year>/') 
+@app.route('articles/<int:year>/')
 def year_archive(year):
 	pass
 
-@app.route('articles/<int:year>/<int:month>/') 
+@app.route('articles/<int:year>/<int:month>/')
 def month_archive(year, month):
 	pass
 
-@app.route('articles/<int:year>/<int:month>/<int:day>/') 
+@app.route('articles/<int:year>/<int:month>/<int:day>/')
 def article_detail(year, month, day):
 	pass
 
