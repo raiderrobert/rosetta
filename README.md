@@ -17,10 +17,6 @@ urlpatterns = [
 ]
 ```
 
-
-
-
-
 ####Flask
 ```python   
 @app.route('articles/2003/')
@@ -43,7 +39,6 @@ def article_detail(year, month, day):
 def slug_view(slug):
 	pass
 ```
-
 
 
 ####Bottle
@@ -70,9 +65,7 @@ def slug_view(slug):
 ```
 
 
-
-
-Pyramid
+####Pyramid
 
 ```python
 config.add_route('special_case_2003', 'articles/2003/')
