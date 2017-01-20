@@ -43,7 +43,7 @@ def slug_view(slug):
 
 ####Bottle
 ```python
-@route('articles/2003/') 
+@route('articles/2003/')
 def special_case_2003():
 	pass
 
@@ -55,7 +55,7 @@ def year_archive(year):
 def month_archive(year, month):
 	pass
 
-@route('articles/<year:int>/<month:int>/<day:int>/') 
+@route('articles/<year:int>/<month:int>/<day:int>/')
 def article_detail(year, month, day):
 	pass
 
