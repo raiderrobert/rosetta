@@ -4,7 +4,9 @@ Lets compare programming languages and frameworks
 ## Frameworks
 
 ### Routing
-Django
+
+####Django
+
 ```python
 urlpatterns = [     
     url(r'^articles/2003/$', views.special_case_2003),
@@ -17,19 +19,9 @@ urlpatterns = [
 
 
 
-```python
-urlpatterns = [     
-    path('articles/2003/', views.special_case_2003),
-    path('articles/<int:year>/', views.year_archive),
-    path('articles/<int:year>/<int:month>/', views.month_archive),
-    path('articles/<int:year>/<int:month>/<int:day>/', views.article_detail),
-    path('articles/<string:slug>/', views.slug_view),
-]
-```
 
 
-
-##Flask
+####Flask
 ```python    
 @app.route('articles/2003/') 
 def special_case_2003():
@@ -54,8 +46,7 @@ def slug_view(slug):
 
 
 
-Bottle
-It's basically Flask (big surprise).
+####Bottle
 ```python
 @route('articles/2003/') 
 def special_case_2003():
@@ -82,11 +73,12 @@ def slug_view(slug):
 
 
 Pyramid
-This one is kind of interesting. They don't have any built in validators. And they call their equivalent predicates, and their usage is far more board. 
 
+```python
 config.add_route('special_case_2003', 'articles/2003/')
 config.add_route('year_archive', 'articles/{year}/')
 config.add_route('month_archive', 'articles/{year}/{month}/')
 config.add_route('article_detail', 'articles/{year}/{month}/{day}/')
 config.add_route('slug_view', 'articles/{slug}/')
 config.scan()
+```
