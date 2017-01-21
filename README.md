@@ -35,7 +35,9 @@ Book.objects.get(author='Unique Name of Person')
 
 ##### Django
 ```python
-Book.objects.create(author=me, title='Sample title', text='Test')
+book = Book.objects.get(author='Unique Name of Person')
+book.text = 'Different test'
+book.save()
 ```
 
 
