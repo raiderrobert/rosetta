@@ -37,7 +37,7 @@ urlpatterns = [
 
     var routes = routeBuilder.Build();
     app.UseRouter(routes);
-    
+   ```
 ### ORMs
 
 #### Models
