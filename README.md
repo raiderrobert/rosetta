@@ -17,7 +17,7 @@ urlpatterns = [
 ]
 ```
 
-#### .NET Core
+#### ASP.NET Core
 ```cs
     routeBuilder.MapRoute(
         "Special Case 2003",
