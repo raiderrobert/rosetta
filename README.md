@@ -33,7 +33,7 @@ urlpatterns = [
         "articles/{year:regex(^\\d{{4}}$)}/{month:regex(^\\d{{2}}$)}/{day:regex(^\\d{{2}}$)}/");
     routeBuilder.MapRoute(
         "Slug View",
-        "articles/{year:regex(^\\w-}$)}/");
+        "articles/{year:regex(^[\\w-]+}$)}/");
 
     var routes = routeBuilder.Build();
     app.UseRouter(routes);
