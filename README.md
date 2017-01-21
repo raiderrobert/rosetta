@@ -1,6 +1,47 @@
 # rosetta
 Lets compare programming languages and frameworks
 
+## Frameworks
+
+### ORMs
+
+#### Models
+
+##### Django
+```python
+from django.db import models
+
+class Book(models.Model):
+    author = models.CharField(max_length=250, unique=True)
+    title = models.CharField(max_length=250)
+    description = models.TextField()
+```
+
+#### Create
+
+##### Django
+```python
+Book.objects.create(author='Unique Name of Person', title='Sample title', text='Test')
+```
+
+#### Query
+
+##### Django
+```python
+Book.objects.get(author='Unique Name of Person')
+```
+
+#### Update
+
+##### Django
+```python
+Book.objects.create(author=me, title='Sample title', text='Test')
+```
+
+
+
+
+
 ## Python Frameworks and Popular Packages
 
 ### Routing
