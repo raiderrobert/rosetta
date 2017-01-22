@@ -17,6 +17,15 @@ urlpatterns = [
 ]
 ```
 
+#### Rails
+
+```ruby
+namespace :articles do
+   resources :2003, to: 'articles#2003', via: :all
+   resources match 'slug', to: 'articles#slug', constraints: { slug: /[\w-]+/}, via: :all
+end
+```
+
 #### ASP.NET Core
 ```cs
     routeBuilder.MapRoute(
